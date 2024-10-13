@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+<body>
+
+    <div class=container>
+    <h1>Área do Triângulo</h1>
+    <img src="areatriangulo.png"
+    width="200px"
+    height="100px"><br>
+    <label for="Base">Base :</label><br>
+    <input type="number" id="Base" required><br>
+    <label for="Altura">Altura :</label><br>
+    <input type="number" id="Altura" required><br>
+    <button onclick="calcularArea()">Area do Triangulo</button>
+    <br>O resultado é: <span></span>
+
+<script>
+    var Base= document.querySelector("#Base");
+    var Altura= document.querySelector("#Altura")
+    var resultado= document.querySelector("span");
+
+    
+    function calcularArea(){
+        resultado.innerHTML=parseInt(Base.value) * (Altura.value) / (2);
+    }
+
+
+</script>   
+</body>
+</html>

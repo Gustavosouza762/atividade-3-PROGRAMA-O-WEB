@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+</head>
+<body>
+    <h1>Somar</h1>
+    <label for="numero1">número 1 :</label>
+    <input type="number" id="numero1" required>
+    <label for="numero2">número 2 :</label>
+    <input type="number" id="numero2" required>
+    <label for="numero3"> número 3 :</label>
+    <input type="number" id="numero3"required>
+    <button onclick="calcularSoma()">Calcular </button>
+    <p id="resultado"></p>
+
+<script>
+   function calcularSoma() {
+    var numero1 = parseInt(document.getElementById('numero1').value, 10);
+    var numero2 = parseInt(document.getElementById('numero2').value, 10);
+    var numero3 = parseInt(document.getElementById('numero3').value, 10);
+
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+document.getElementById('resultado').innerText = 'insira números válidos.';
+return;
+}
+        var soma = numero1 + numero2 + numero3;
+        document.getElementById('resultado').innerText = 'A soma dos números é: ' + soma;
+}
+</script>    
+    
+</body>
+</html>
